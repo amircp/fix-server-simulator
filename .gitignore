@@ -1,2 +1,5 @@
 .idea/
 logs.log
+bin/
+lib/
+.DS_Store
