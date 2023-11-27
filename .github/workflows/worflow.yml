@@ -1,10 +1,10 @@
 name: First Workflow
-on: workflow_dispatch
+on: [workflow_dispatch, push]
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print-greetings
         run: echo "hello wordl!"
-      - name: Print Goodbye
-        run: echo "Done bye!"
+      - name: Print context
+        run: echo "${{ toJSON(github) }}"
